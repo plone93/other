@@ -1,0 +1,25 @@
+스프링 컨텍스트 에러 && import에러
+ 
+톰캣서버 설치  jre or jdk 버전  맞추기 (이클립스,톰캣,프로젝트 3개 전부 맞아야함)
+jdk가 오류가 제일 적음
+
+이클립스 : window > Preferences > java > installed JREs > add >  폴더위치(c>자바>jdk)
+톰캣 : 서버추가 > next > jre선택 > jdk
+프로젝트 > 빌드패쓰 > add jrd 
+
+자바 버전업이 되면서  기존 파일과 버전이 안맞아서 오류가 나기도함
+또한 c : 프로그램파일 : 자바에서  버전이달라도 동일한 파일이 있으면 좋지않음
+
+톰캣서버 설정
+Publish module contexts to separate XML files  체크 
+포트번호 8989
+
+1. 톰캣 클린
+
+2. Project > Clean
+
+3. M.2 > repository폴더 삭제 > Maven > 프로젝트 업데이트
+
+
+롬북은 cmd창 >  java -jar +  파일경로 + 롬복이름
+새롭게 import한 프로젝트나  롬복을 새로 깔았을 땐 @어노테이션을  다시 붙여넣어야 적용됨

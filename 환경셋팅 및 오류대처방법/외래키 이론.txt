@@ -1,0 +1,36 @@
+외래키는 참조할려는 테이블의 키(기본키 아니여도됨)가 참조대상 테이블의 기본키를 참조함
+
+기본키는 데이터 중복이 허용이 안됨  
+ex) 카트에 상품을 담을 때  user_id를 넣는데   user_id가 실제 user테이블에 존재하는 값인지 참조하여 데이터 무결성을 위해 검사하는 것
+
+또한 테이블을 join할 때도 사용됨
+
+select A.member_id, A.member_name, b.user_id, b.user_name
+from MEM A  //MEM을 A로 지정
+join  USER B // USER B로 지정하고 합침
+ON A.member_id = B.user_id  // 기준,  A테이블의 id와  B테이블의 id가 같은 것 중에서
+where A.member_name = '한지호';  // A테이블의 이름이 한지호인것
+
+
+
+create table kimino_recipe_cart(
+	user_id varchar2(100) primary key, 
+	product_name varchar2(30) not null,
+	price number(30) default 0,
+	content varchar2(1000) not null,
+	image varchar2(500), 
+	amount number(30) default 0,
+	foreign key (user_id) references kimino_recipe_user (user_id)
+);
+
+create table kimino_recipe_user(
+	user_num number(30),   //기본키는 중복허용안함  , 참조대상 테이블의 기본키를 참조키로 설정가능, 참조할려는 테이블은 기본키가 아니여도됨
+	user_id varchar2(100)  primary key, 
+	user_pass varchar2(100) not null,
+	user_name varchar2(100) not null,
+	user_email varchar2(100) not null,
+	signdate date default sysdate
+	);
+
+href="boardView?board_num=${boardList.board_num}&board_id=${board_id}&page=${pageVO.page}"
+	

@@ -1,0 +1,5 @@
+안드로이드 스튜디오
+
+<uses-permission android:name="android.permission.INTERNET"/> //인터넷권한
+user-permission x
+uses-permission o

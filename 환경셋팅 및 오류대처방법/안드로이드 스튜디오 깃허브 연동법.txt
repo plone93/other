@@ -1,0 +1,13 @@
+안드로이드 스튜디오
+
+
+
+깃허브 연동법
+
+1. 깃 설치
+2. file > setting > versionControl > git 추가
+3. VSC > Enable Version Control Integration > Git 추가
+4.깃허브 로그인 > 프로젝트 생성  > 프로젝트 https 주소 복사
+5.VCS > git > remotes >  붙여넣기
+6.왼쪽 프로젝트별로 보기 선택 > 프로젝트 왼쪽 마우스 > git > add 추가
+7.VSC > commit > push

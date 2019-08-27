@@ -1,0 +1,14 @@
+php 컴포저 환경설정
+
+
+https://getcomposer.org/
+다운후 
+
+C:\Bitnami\wampstack-7.3.6-2\php
+
+설치
+
+cmd 열고  cd C:\Bitnami\wampstack-7.3.6-2\php  실행      echo @php "%~dp0composer.phar" %*>composer.bat
+
+C:\bin>echo @php "%~dp0composer.phar" %*>composer.bat
+실행해서  해당경로에 bat 파일을 생성하면 명령어 실행마다  php 접두어를 안붙여도 됨

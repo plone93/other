@@ -1,0 +1,117 @@
+스위프트
+코틀린과 동일
+var 변수명 : 변수타입(String, int)
+
+final = let
+String = str
+char = Character
+int = Int
+double = double
+float = float
+Boolean = Bool
+? : 있거나 없거나
+! : 확신
+
+for(int i =0; i > 10; i++){}  =  for i in 0...10 {}
+if(num1 > num2) {} = if num1 > num2 {}
+범위 연산자
+
+스위치
+let score = 100
+var grade = ""
+switch score{
+case 90...100 : print(score+"점")
+case 80...89 : print(score+"점")
+default : print("나머지")
+
+배열
+var Array1 : Array = ["a","b","c"]
+var Array2 : [String] = ["a","b","c"]
+var Array2 : [[String]] = [["a","b","c"]] // 2차원 배열
+var Array3 : Array = [] // 빈 배열
+
+var newArray = Array1 + Array2
+print(newArray)
+
+Array1.append("d") // 마지막에 추가
+Array1.insert("f", at : 2) // 특정 위치에 넣음
+Array1.remove(at : 0)
+Array1.removeFirst()
+Array1.removeLast()
+
+print(Array1)
+print(Array1[1])
+pinrt(Array1.count)
+
+for name in Array1{
+print(name)
+}
+
+사전
+var name : Dictionary = ["Human" : 1, "Cat" : 2]
+var name : [String : Int] = ["Human" : 1, "Cat" : 2]
+
+print(name["Human]!) //프린트
+name["Tiger"] = 5 //추가
+name["Tiger"] = 7 //변경  ( 기존에 Tiger값이 있을 경우)
+name.removeValue(forkey : "Tiger")
+
+순회 프린트
+for key in name.keys{
+print(key)
+}
+for value in name.values{
+print(value)
+}
+
+Function : 함수
+
+//자바
+public Int sum(int AA, int BB){
+return AA+BB;
+//스위프트
+func sum(AA : Int, BB : Int) -> Int(리턴반환타입){
+return AA + BB
+}
+
+//구조체
+struct MyInfo{
+let name = "멍멍"
+var age = 30
+
+func showInfo() -> String{
+return "이름 : \(name), 나이 : \(age)"
+
+//구조체 복사
+var info = MyInfo()
+info.name = "야옹" (let(final)로 선언된 변수는 수정 불가) x
+info.age = 20 
+
+클래스 상속
+class Bird : Animal
+  override func cry(){
+    print("짹짹")  
+    }
+    func superCry(){
+    super.cry()
+    }
+}
+
+var value : Int?
+print(value!) // ?인데 !했기 때문에 에러
+
+스위프트도 하나의 클래스에는 하나의 상속이 가능하며
+프로토콜(인터페이스)를 통해 여러개 상속받는 것처럼 가능
+
+//자바
+interface firstInterface{
+}
+//스위프트
+protocol firstProtocol{
+}
+
+class firstClass : firstProtocol, lastProtocol{
+}
+
+
+

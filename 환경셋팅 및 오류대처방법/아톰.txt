@@ -1,0 +1,30 @@
+minimap : 화면 한 쪽에 파일 전체 내용의 미니맵이 표시됩니다. 서브라임텍스트를 사용하셨던 분이라면 익숙한 기능입니다.
+
+AtomicChar : 한글을 한 줄로 길게 쓸 때에 개행이 이상하게 되는데, 그 문제를 해결해줍니다.
+
+emmet : zen-coding 이라고도 합니다. html 등의 문서를 작성시 css selector 방식으로 구조화된 구문을 빠르게 작성합니다.
+
+highlight-selected : 한 페이지에서 선택되어진 단어와 동일한 단어를 표시해줍니다. 기본인줄 알았는데, 안되서 찾아보니 패키지가 있더군요.
+
+Remote-FTP : FTP 또는 SFTP, FTPS 를 이용해 원격지에 있는 파일을 다운로드 하고 수정하고 저장과 동시에 업로드가 가능합니다.
+
+linter : 다양한 문법적 오류를 표시해주는 유용한 패키지입니다. 설치 후 프로그램 언어별로 추가 설치하면 문법적 오류나 권장 내용에 대해 색상과 문구로 알려줍니다.
+
+linter-jshint : linter 의 Javascript 버젼입니다. 최근 제가 사용하는 언어가 웹 서버 관련 작업은 Javascript가 대부분이라 필수입니다.
+
+linter-csslint : linter 의 CSS 버젼입니다. 웹 작업시 없어서는 안될 .CSS 파일 작성시 관련 정보를 표시해줍니다.
+
+atom-beautify (https://atom.io/packages/atom-beautify) 
+소스코드들 중에 한칸 더 들어와 있는 등, 정렬되지 않은 코드를 정렬해준다. 사용은 우클릭 - Debug Atom Beautify 를 클릭해주면 실행된다.
+
+Atom-autocomplete-php (https://atom.io/packages/atom-autocomplete-php)
+PHP 코드 자동완성 기능을 추가해준다. 설치하면 PHP 쓰기가 한결 편해짐.
+
+git-control
+더욱 직관적으로 git 컨트롤을 가능하게 해준다.
+
+terminal-plus
+리눅스 명령창처럼 콘솔창을 제공해준다
+
+open-in-browsers
+setting>view-code>keymaps>open-in-browsers> f12 변경

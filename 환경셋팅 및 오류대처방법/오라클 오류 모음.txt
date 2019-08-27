@@ -1,0 +1,1 @@
+missing right parenthesis : 콤마 빼먹음,  primary key not null 순서 오류, 데이터타입 오타

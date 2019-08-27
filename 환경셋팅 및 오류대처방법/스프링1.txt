@@ -1,0 +1,107 @@
+스프링 스타터 프로젝트 = 스프링 부트
+스프링 레거시 프로젝트 = 오래된 버전
+
+프로젝트 이름
+www.google.com  >  com.google.www
+
+com.samsung(그룹아이디)
+.galaxy(아티팩트 아이디), desktop, moblie  소문자 쓸것
+.table이름
+.레이어(DAO DTO 서비스 도메인
+
+IOC (제어의 역전)
+
+기존엔 개발자가 new 객체를 해서  객체를 생생했는데
+이런 경우 중요 클래스의 내용이 바뀔경우  작동 안한다
+
+이런 결합력을 낮추기위해  객체생성 권한을  스프링에게 넘김
+이로써 유지보수가 용이해짐
+
+invalid 에러  > 라이브러리 에러
+
+WEB-INF는 외부에서 접근이 불가능함 보안상
+스프링 프레임 워크를 통해서 접근해야함
+
+webapp는 외부에서 접근 가능
+
+
+/**/ 모든 하위 디렉터리
+*이름    모든파일중 이름으로 끝나는거  
+
+@Controller   현재 클래스를  스프링에서 관리하는 컨트롤러로 등록
+서블릿 컨텍스트의 com.example.spring01 안에있는 모든컨트롤러 검사
+
+서버가 시작이되면   web.xml을 읽음 > DispatcherServlet 참조 > servlet-context.xml 읽음
+> 컨트롤러 메모리 등록 > url 매핑 
+
+servlet-context 서블릿에 관련된 설정
+root-context 서블릿 이외에 관련된 설정
+
+/ > DefaultServlet
+/* > 모든 요청
+*.do >  확장자가 do인 서블릿
+
+@Controller : 컨트롤러 
+@Repository : DAO 
+@Service : 서비스 
+@Inject : 의존관계 주입
+
+
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+@Inject : 의존관계 주입
+의존 관계(강한 결합관계) : MemberUse가  Member에 의존한다
+class Member{
+String userid;
+public Member(){}  >  private Member(){}   외부에서 접근못함, 결합력이 강해서  유지보수가 어려움
+}
+
+public class MemberUse{
+public MemberUse(){
+Member m = new Member();
+	}
+}
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+@Inject : 의존관계 주입
+의존 관계 주입(느슨한 결합관계) : IOC ,객체에 대한 제어권(제어의 역전)
+객체생성 제어권을 개발자 > 스프링으로 이동
+class Member{
+String userid;
+public Member(){}  >  private Member(){}   외부에서 접근못함, 결합력이 강해서  유지보수가 어려움
+}
+
+public class MemberUse{
+@Inject 
+Member m;
+public MemberUse(Member m){ <<<< Member 클래스가 private이 되어도 객체생성 가능
+
+	}
+}
+ㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡㅡ
+톰캣 기본 포트 8080 오라클도 8080이라서 오라클 포트를 바꿔줘야한다  8989
+
+root-context  에서의 bean의 역할 : 클래스 객체 생성
+
+어노테이션  : @
+
+onMethod_ : 추가할 어노테이션 
+@Autowired : 빈객체 생성 , 주입
+	      타입에 따라 맞춰 Bean을 주입한다.(필드, 생성자, 입력파라미터가 여러개인 메서드에 적용가능
+
+public void setTire(Tire tire) {
+    this.tire = tire;
+}
+
+@Autowired 
+Tire tire;
+
+
+@Setter(onMethod_ = @Autowried)
+String name;
+
+@Component
+servlet-context에 있는 Component-scan에 의해 특정 패키지 안의 클래스들을 스캔하고
+@Component 어노테이션이 있는 클래스에 대하여  bean 인스턴스를 생성한다.
+
+스프링 속성 > ControllerAdvice, Controller, Requestmapping이 있음
+@ControllerAdvice : 예외처리를 담당하는 컨트롤러
