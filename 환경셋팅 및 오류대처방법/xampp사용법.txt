@@ -1,0 +1,9 @@
+xampp실행
+
+start를 누르면 서버가 실행
+stop을 누르면 서버가 중지됨
+
+Admin을 누르면 테이블 생성 및 관리를 할 수 있는 페이지가 열림
+
+explorer = xampp의 파일위치
+C:\xampp\htdocs 안에 있는 php 파일이 실행됨
