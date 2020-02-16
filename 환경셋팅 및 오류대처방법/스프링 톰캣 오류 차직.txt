@@ -1,4 +1,10 @@
 스프링 컨텍스트 에러 && import에러
+
+스프링 어노테이션 오류
+@getMapping @postMapping @AllArgsConstructor
+등 스프링 4.3이상에서만 사용가능
+@RequestMapping(value = "/boardList", method = {RequestMethod.GET})
+으로 변경
  
 톰캣서버 설치  jre or jdk 버전  맞추기 (이클립스,톰캣,프로젝트 3개 전부 맞아야함)
 jdk가 오류가 제일 적음
