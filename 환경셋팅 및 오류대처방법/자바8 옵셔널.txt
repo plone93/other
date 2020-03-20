@@ -1,0 +1,39 @@
+1. 개요
+자바 옵셔널Java Optional에 대해 알아보고 자바 8부터 시작해 9, 10까지 추가된 옵셔널 메서드를 소개합니다.
+
+2. Java 8 Optional
+자바 옵셔널은 자바 8에서 최초로 도입 되었습니다. 도입이 된 이유는 너무 명확합니다. 
+바로 null 때문입니다. null 은 자바 프로그래머들에게 편안함보단 불편함을 더 많이 제공하게 되었습니다. 
+간단한 코드를 통해 알아볼까요?
+
+
+Optional<T> str = Optional.empty(); 
+str에 null을 주입
+
+String imsi = null;
+Optional<T> str = Optional.ofNullable(imsi);
+null주입을 허용
+
+str.isPresent(); 
+str안에 null이 있는지 없는지  true false 로 반환
+
+str.ifPresent(A > {
+	int i = 10;
+	i++;
+});
+str이 null이 아니라면 A를 주입
+A는 아래 함수 결과값을 지님
+
+str.orElse("AAA");
+str안에 null이 있으면 nullPointError가 발생하니
+null값을 orElse안에 있는 ("AAA") 문자열로 치환한다
+()안에 객체 주입도 가능
+
+
+str.orElseGet(()-> {
+	int i = 10;
+	i++;
+	return i+""; }));
+
+str이 null이라면 다음 함수를 실행한 결과를 주입
+return을 객체로 반환하면  위의 실행결과를 객체로 변환해 리턴
